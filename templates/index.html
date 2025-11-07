@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS FORUM</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='shared-footer.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <video id="back" src="{{ url_for('static', filename='6797-196071980.mp4') }}" autoplay loop muted playsinline></video>
+    
+    <nav class="navbar">
+        <img id="logo" src="{{url_for('static', filename='NEXUS white font.png')}}" alt="nexus logo">
+        <ul class="main-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+            <li><a href="{{url_for('events')}}">Events</a></li>
+            <li><a href="{{url_for('committee')}}">Committee</a></li>
+            <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+        </ul>
+        <ul class="auth-links">
+            <li><a href="{{url_for('login')}}"><button id="log">log in</button></a></li>
+            <span>|</span>
+            <li><a href="{{url_for('signup')}}"><button id="signup">Sign in</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="intro">
+        <div class="h2">
+            <h2 id="typewriter-text" class="typewriter">THE NEXUS FORUM</h2>
+        </div>
+        <div class="p">
+            <p>Where different minds meet to create something incredible.</p>
+        </div>
+    </div>
+
+
+    <div class="outer-dep">
+        <div class="dep">
+            <!-- <img src="/intro pages/WhatsApp_Image_2025-07-29_at_12.43.47_039b25a9-removebg-preview.png" alt=""> -->
+            <h3>THE DEPARTMENT OF COMPUTER SCIENCE AND ENGINEERING (DATA SCIENCE)</h3>
+            <p>The Nexus Forum of the CSE-Data Science Department is a dynamic platform created by the students for the
+                students to foster collaboration, knowledge sharing, and innovation among students, faculty, and
+                industry experts.</p>
+        </div>
+    </div>
+
+    <div class="vision-mission-section">
+        <h2 class="section-title">Our Vision & Mission</h2>
+        <div class="vm-container">
+            <div class="vm-card">
+                <h3>Institute</h3>
+                <div class="vm-content">
+                    <div class="vision">
+                        <h4>Vision</h4>
+                        <p>To create a knowledge based society with clarity of thoughts and charity at hearts to serve
+                            humanity with integrity.</p>
+                    </div>
+                    <div class="mission">
+                        <h4>Mission</h4>
+                        <p>To empower youth to be technocrats of tomorrow with absolute discipline, quest for knowledge
+                            and strong ethos to uphold the spirit of professionalism.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vm-card">
+                <h3>Department</h3>
+                <div class="vm-content">
+                    <div class="vision">
+                        <h4>Vision</h4>
+                        <p>To develop data Science engineers to administer the data centric world for strengthening the
+                            modern society with analytical practices and research.</p>
+                    </div>
+                    <div class="mission">
+                        <h4>Mission</h4>
+                        <p>To upraise skilled data science professionals by imparting domain specific knowledge to
+                            contribute towards analytical data computing area with strong professional ethics and wide
+                            industry exposure.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="vm-card">
+                <h3>Nexus Forum</h3>
+                <div class="vm-content">
+                    <div class="vision">
+                        <h4>Vision</h4>
+                        <p>To foster a dynamic platform where different minds meet to create something incredible
+                            through collaboration, innovation, and knowledge sharing.</p>
+                    </div>
+                    <div class="mission">
+                        <h4>Mission</h4>
+                        <p>To create a student-driven community that promotes learning, networking, and professional
+                            development through events, workshops, and collaborative projects.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="showcase">
+        <div class="outer-past1">
+            <div id="p1">
+
+            </div>
+            <div id="p2">
+
+            </div>
+        </div>
+
+        <div class="outer-past2">
+            <div id="p3">
+
+            </div>
+            <div id="p4">
+
+            </div>
+        </div>
+
+        <div class="outer-past3">
+            <div class="p5">
+
+            </div>
+            <div class="p5">
+
+            </div>
+            <div class="p5">
+
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer">
+            <div class="top">
+                <h2>NEXUS FORUM</h2>
+                <p id="f">Nexus Forum 2025 all rights reserved.</p>
+            </div>
+            <div class="top2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Visit College</a></li>
+                </ul>
+            </div>
+            <div class="top4">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+                    <li><a href="{{url_for('events')}}">Events</a></li>
+                    <li><a href="{{url_for('committee')}}">Committee</a></li>
+                    <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="top3">
+                <h3>connect with us</h3>
+                <div class="image">
+                    <a href="#"><img src="{{url_for('static', filename='instagram.png')}}" alt="Instagram"></a>
+                    <a href="#"><img src="{{url_for('static', filename='facebook.png')}}" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

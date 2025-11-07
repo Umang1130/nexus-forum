@@ -1,0 +1,232 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: rgb(22, 22, 22);
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+#back {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  opacity: 0.05;
+}
+
+.login-box h2 {
+  color: white;
+  font-size: 30px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.login-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  width: 99.7vw;
+  gap: 30px;
+}
+
+.in {
+  padding: 15px;
+  border-radius: 5px;
+  /* toned-down white -> soft blue accent */
+  border: 1px solid rgba(113, 200, 255, 0.35);
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 15rem;
+  transition: border-color 0.3s ease;
+}
+
+.in:focus {
+  /* stronger blue when focused */
+  border-color: rgba(113, 200, 255, 0.95);
+  outline: none;
+  box-shadow: 0 0 8px rgba(113, 200, 255, 0.45);
+}
+
+
+
+#login-btn {
+  padding: 12px 35px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(113, 200, 255, 0.699);
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 600;
+}
+
+#login-btn:hover {
+  background-color: rgba(133, 208, 255, 0.756);
+  color: black;
+}
+
+.text-center a {
+  text-decoration: none;
+  color: white;
+}
+.text-center a:hover {
+  text-decoration: underline;
+}
+
+.inner-box {
+  width: 450px;
+  height: 490px;
+  /* subtle blue border instead of stark white */
+  border: 2px solid rgba(113, 200, 255, 0.45);
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  background-color: rgb(22, 22, 22, 0.7);
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(113, 200, 255, 0.06);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.inner-box:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(113, 200, 255, 0.12);
+  transform: translateY(-5px);
+}
+
+.inner-box img {
+  display: flex;
+  z-index: -1;
+  width: 75px;
+  height: 75px;
+  padding-bottom: 12px;
+}
+
+.inner-box pre {
+  margin-top: 10px;
+  font-size: 17px;
+}
+.inner-box h2 {
+  margin-top: 10px;
+  font-size: 26px;
+  margin-bottom: 12px;
+}
+
+.signup-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  width: 99.7vw;
+  gap: 30px;
+  margin-top: 12px;
+
+}
+
+.inner-box2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  width: 450px;
+  height: 540px;
+  border: 2px solid rgba(113, 200, 255, 0.45);
+  border-radius: 20px;
+  background-color: rgb(22, 22, 22, 0.7);
+  position: relative;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(113, 200, 255, 0.06);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.inner-box2:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(113, 200, 255, 0.12);
+  transform: translateY(-5px);
+}
+
+.inner-box2 img {
+  display: flex;
+  width: 75px;
+  height: 75px;
+  padding: 12px 0 0 0;
+}
+
+.inner-box2 h2 {
+  font-size: 26px;
+  padding: 23px 0 10px 0;
+}
+
+.signup-box form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 50px 0 50px;
+}
+
+.input-box {
+  padding: 15px;
+  border-radius: 5px;
+  /* keep a light border for inputs in signup form too */
+  border: 1px solid rgba(113, 200, 255, 0.25);
+  background-color: rgb(255, 255, 255);
+  color: black;
+  width: 15rem;
+}
+
+.inner-box2 button {
+  padding: 12px 35px;
+  border: none;
+  border-radius: 8px;
+  background-color: rgba(113, 200, 255, 0.699);
+  cursor: pointer;
+  font-size: medium;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.inner-box2 button:hover {
+  background-color: rgba(133, 208, 255, 0.756);
+  color: black;
+}
+
+.inner-box2 pre {
+  font-size: 17px;
+}
+
+.inner-box2 a {
+  text-decoration: none;
+  color: white;
+}
+.inner-box2 a:hover {
+  text-decoration: underline;
+
+}

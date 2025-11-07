@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nexus Forum - Core Committee</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'core-committee.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename= 'shared-footer.css')}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right_alt" />
+
+</head>
+<body>
+
+    <nav class="navbar">
+        <img id="logo" src="{{url_for('static', filename='NEXUS white font.png')}}" alt="nexus logo">
+        <ul class="main-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+            <li><a href="{{url_for('events')}}">Events</a></li>
+            <li><a href="{{url_for('committee')}}">Committee</a></li>
+            <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+        </ul>
+        <ul class="auth-links">
+            <li><a href="{{url_for('login')}}"><button id="log">log in</button></a></li>
+            <span>|</span>
+            <li><a href="{{url_for('signup')}}"><button id="signup">Sign in</button></a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="committee-container" id="core-committee">
+            <h2 class="committee-title">Core Committee 2025</h2>
+            <div class="faculty-coordinator-container" style="margin-bottom: 40px;">
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='2037 - Aashish Dandekar (The Brainwaves).jpg')}}" alt="Ashish Dandekar" class="member-photo" />
+                    <div>
+                        <div class="role">Faculty Coordinator</div>
+                        <div class="member-name">Ashish Dandekar</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="committee-list">
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='cc7.png')}}" alt="Rushabh Wakekar" class="member-photo" />
+                    <div class="role">President</div>
+                    <div class="member-name">Rushabh Wakekar</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static',filename='cc2.png')}}" alt="Manjosh Lilhare" class="member-photo" />
+                    <div class="role">Vice President</div>
+                    <div class="member-name">Manjosh Lilhare</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static',filename='cc1.png')}}" alt="Ajinkya Mariche" class="member-photo" />
+                    <div class="role">Secretary</div>
+                    <div class="member-name">Ajinkya Mariche</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static',filename='cc4.png')}}" alt="Priyanshi Khadgi" class="member-photo" />
+                    <div class="role">Joint Secretary</div>
+                    <div class="member-name">Priyanshi Khadgi</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static',filename='cc6.png')}}" alt="Shivansh Agrawal" class="member-photo" />
+                    <div class="role">Treasurer</div>
+                    <div class="member-name">Shivansh Agrawal</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static',filename='cc8.png')}}" alt="Harshwardhan Jadhav" class="member-photo" />
+                    <div class="role">Joint Treasurer</div>
+                    <div class="member-name">Harshwardhan Jadhav</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static',filename='cc3.png')}}" alt="Shrenik Nil" class="member-photo" />
+                    <div class="role">Documentation Head</div>
+                    <div class="member-name">Shrenik Nil</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static',filename='cc5.png')}}" alt="Mohit Gupta" class="member-photo" />
+                    <div class="role">Mentor</div>
+                    <div class="member-name">Mohit Gupta</div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+    
+    <div class="haikei-bg"></div>
+
+    <footer>
+        <div class="footer">
+            <div class="top">
+                <h2>NEXUS FORUM</h2>
+                <p id="f">Nexus Forum 2025 all rights reserved.</p>
+            </div>
+            <div class="top2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Visit College</a></li>
+                </ul>
+            </div>
+            <div class="top4">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+                    <li><a href="{{url_for('events')}}">Events</a></li>
+                    <li><a href="{{url_for('committee')}}">Committee</a></li>
+                    <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="top3">
+                <h3>connect with us</h3>
+                <div class="image">
+                    <a href="#"><img src="{{url_for('static', filename='instagram.png')}}" alt="Instagram"></a>
+                    <a href="#"><img src="{{url_for('static', filename='facebook.png')}}" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

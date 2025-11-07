@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Nexus Forum - Faculty Members</title>
+    <link rel="stylesheet" href="{{url_for('static', filename= 'faculty.css')}}" />
+    <link rel="stylesheet" href="{{url_for('static', filename='shared-footer.css')}}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <img id="logo" src="{{url_for('static', filename='NEXUS white font.png')}}" alt="nexus logo">
+        <ul class="main-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+            <li><a href="{{url_for('events')}}">Events</a></li>
+            <li><a href="{{url_for('committee')}}">Committee</a></li>
+            <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+        </ul>
+        <ul class="auth-links">
+            <li><a href="{{url_for('login')}}"><button id="log">log in</button></a></li>
+            <span>|</span>
+            <li><a href="{{url_for('signup')}}"><button id="signup">Sign in</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="hod-section">
+            <div class="hod-photo">
+                <img src="{{url_for('static', filename='Manish Gudadhe SVPCET Nagpur - Manish Gudadhe.jpg')}}" alt="" />
+            </div>
+            <div class="hod-info">
+                <div class="hod-name">Dr. Manish Babasaheb Gudadhe</div>
+                <div class="hod-designation">Head of Department</div>
+                <div class="hod-experience">25 Years of Experience</div>
+                <div class="hod-specialization">Database, Big data, Cloud Computing, Data Structure</div>
+            </div>
+        </section>
+    </div>
+    <main>
+
+        <hr>
+        <div class="committee-container" id="steering-body">
+            <h2 class="committee-title">Steering Body</h2>
+            <div class="committee-list">
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='photo_nptel - Leena Mandurkar.jpg')}}" alt="" class="member-photo" />
+                    <div class="member-name">Leena Mandurkar</div>
+                    <div class="role">Assistant Professor </div>
+                    <div class="member-experience">13 Years Experience</div>
+                    <div class="member-specialization">Machine Learning, explainable AI</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='DSC_1584-2 - Abhinav Muley.JPG')}}" alt="" class="member-photo" />
+                    <div class="member-name">Abhinav Muley</div>
+                    <div class="role">Assistant Professor</div>
+                    <div class="member-experience">6 Years Experience</div>
+                    <div class="member-specialization">Reinforcement Learning and Game Theory</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='profile-pic (3) - Bhagyashree Hambarde.png')}}" alt="" class="member-photo" />
+                    <div class="member-name">Prof. Bhagyashree Hambarde </div>
+                    <div class="role">Assistant Professor</div>
+                    <div class="member-experience">9 Years Experience</div>
+                    <div class="member-specialization">Machine Learning, Deep Learning, Blockchain</div>
+                </div>
+            </div>
+        </div>
+
+
+        <hr>
+        <div class="committee-container" id="other-faculty">
+            <h2 class="committee-title">Faculty Members</h2>
+            <div class="committee-list">
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='2037 - Aashish Dandekar (The Brainwaves).jpg')}}" alt=""
+                        class="member-photo" />
+                    <div class="member-name">Aashish R Dandekar</div>
+                    <div class="role">Assistant Professor</div>
+                    <div class="member-experience">14 Years Experience</div>
+                    <div class="member-specialization">Deep Learning, Image Processing</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='passport - tejal irkhede.jpg')}}" alt="" class="member-photo" />
+                    <div class="member-name">Dr. Tejal Irkhede </div>
+                    <div class="role">Assistant Professor</div>
+                    <div class="member-experience">13 Years Experience</div>
+                    <div class="member-specialization">IoT, Data Science </div>
+
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='IMG-20250821-WA0009 - Kalyani Satone.jpg')}}" alt="" class="member-photo" />
+                    <div class="member-name">Kalyani satone </div>
+                    <div class="role">Assistant Professor</div>
+                    <div class="member-experience">22 Years Experience</div>
+                    <div class="member-specialization">Blockchain ml and networks</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='DSC_1602 (2) - Jayshri Harde.JPG')}}" alt="" class="member-photo" />
+                    <div class="member-name">Dr. Jayshri Harde</div>
+                    <div class="role">Assistant Professor</div>
+                    <div class="member-experience">8 Years Experience</div>
+                    <div class="member-specialization">Data Mining </div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='DSC_0048 - NISCHAL PURI.JPG')}}" alt="" class="member-photo" />
+                    <div class="member-name">Dr. Nischal Puri </div>
+                    <div class="role">Assistant Professor</div>
+                    <div class="member-experience">18 Years Experience</div>
+                    <div class="member-specialization">Data Science,Machine Learning,NLP,Compilers</div>
+                </div>
+
+                <div class="committee-card">
+                    <img src="{{url_for('static', filename='ROSHAN VINAYAK BAWNE - Roshan Bawne.jpg')}}" alt="" class="member-photo" />
+                    <div class="member-name">Roshan Bawne</div>
+                    <div class="role">Lab Assistant</div>
+                    <div class="member-experience">3 Years Experience</div>
+                    <div class="member-specialization">Computer Hardware and Networking </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <div class="top">
+                <h2>NEXUS FORUM</h2>
+                <p id="f">Nexus Forum 2025 all rights reserved.</p>
+            </div>
+            <div class="top2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Visit College</a></li>
+                </ul>
+            </div>
+            <div class="top4">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+                    <li><a href="{{url_for('events')}}">Events</a></li>
+                    <li><a href="{{url_for('committee')}}">Committee</a></li>
+                    <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="top3">
+                <h3>connect with us</h3>
+                <div class="image">
+                    <a href="#"><img src="{{url_for('static', filename='instagram.png')}}" alt="Instagram"></a>
+                    <a href="#"><img src="{{url_for('static', filename='facebook.png')}}" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

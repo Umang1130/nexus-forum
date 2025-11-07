@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLubs</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='clubs.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='shared-footer.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_right_alt" />
+
+</head>
+<body>
+    <video id="back" src="{{url_for('static', filename='6797-196071980.mp4')}}" autoplay loop muted playsinline></video>
+    <nav class="navbar">
+        <img id="logo" src="{{url_for('static', filename='NEXUS white font.png')}}" alt="nexus logo">
+        <ul class="main-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+            <li><a href="{{url_for('events')}}">Events</a></li>
+            <li><a href="{{url_for('committee')}}">Committee</a></li>
+            <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+        </ul>
+        <ul class="auth-links">
+            <li><a href="{{url_for('login')}}"><button id="log">log in</button></a></li>
+            <span>|</span>
+            <li><a href="{{url_for('signup')}}"><button id="signup">Sign in</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Our Clubs</h1>
+        <p>Join our specialized clubs and enhance your skills in various domains</p>
+    </div>
+
+    <div class="club-info">
+        <div class="cards">
+            <div class="card1">
+                <div class="img">
+                <img src="{{url_for('static', filename='1000100511hosodud.jpg')}}" alt="wt">
+                <h4>Web Technology Club</h4>
+                <p>A hub for aspiring web developers to explore HTML, CSS, JavaScript, and modern frameworks. We organize coding challenges, workshops, and collaborative projects to sharpen your web skills.</p>
+                <div class="lm-btn">
+                    <a href="{{url_for('webnest')}}"><button class="lm">learn more</button></a>
+                </div>
+                </div>
+            </div>
+
+            <div class="card1">
+                <div class="img">
+                <img src="{{url_for('static', filename='4167275_18770.jpg')}}" alt="dsi">
+                <h4>Data Science Innovation Club</h4>
+                <p>Dedicated to turning data into insights through machine learning, AI, data science tools and analytics. Join us to work on real-world datasets, research, and innovative data-driven solutions.</p>
+                <div class="lm-btn">
+                    <a href="{{url_for('dsi')}}"><button class="lm">learn more </button></a>
+                </div>
+                </div>
+            </div>
+
+            <div class="card1">
+                <div class="img">
+                <img src="{{url_for('static', filename='14140043_5384286.jpg')}}" alt="cc">
+                <h4>Career Catalyst Club</h4>
+                <p>Focused on professional growth through resume building, interview preparation, and industry networking. We help members bridge the gap between academics and career success.</p>
+                <div class="lm-btn">
+                    <a href="{{url_for('cc')}}"><button class="lm">learn more</button></a>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="top">
+                <h2>NEXUS FORUM</h2>
+                <p id="f">Nexus Forum 2025 all rights reserved.</p>
+            </div>
+            <div class="top2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Visit College</a></li>
+                </ul>
+            </div>
+            <div class="top4">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+                    <li><a href="{{url_for('events')}}">Events</a></li>
+                    <li><a href="{{url_for('committee')}}">Committee</a></li>
+                    <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="top3">
+                <h3>connect with us</h3>
+                <div class="image">
+                    <a href="#"><img src="{{url_for('static', filename='instagram.png')}}" alt="Instagram"></a>
+                    <a href="#"><img src="{{url_for('static', filename='facebook.png')}}" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

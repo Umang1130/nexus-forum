@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Web Nest Technology Club</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='webnest.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='shared-footer.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <img id="logo" src="{{url_for('static', filename='NEXUS white font.png')}}" alt="nexus logo">
+        <ul class="main-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+            <li><a href="{{url_for('events')}}">Events</a></li>
+            <li><a href="{{url_for('committee')}}">Committee</a></li>
+            <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+        </ul>
+        <ul class="auth-links">
+            <li><a href="{{url_for('login')}}"><button id="log">Log in</button></a></li>
+            <span>|</span>
+            <li><a href="{{url_for('signup')}}"><button id="signup">Sign up</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Web Nest Technology Club</h1>
+        <p>Where Innovation Meets the Web — Building the Future of Technology</p>
+    </div>
+
+    <div class="container">
+        <div class="about-section" id="about">
+            <h2>About Us</h2>
+            <p>
+                <strong>Web Nest</strong> is a creative technology club under the Nexus Forum. We aim to foster innovation and technical excellence among students by providing hands-on experience in web development, programming, and emerging technologies.
+            </p>
+
+            <h2>Our Vision</h2>
+            <p>
+                To empower tech enthusiasts to design, develop, and deploy solutions that shape tomorrow’s digital world.
+            </p>
+
+            <h2>Activities</h2>
+            <ul>
+                <li>Workshops on Web Development (HTML, CSS, JavaScript, React, etc.)</li>
+                <li>Hackathons and Coding Challenges</li>
+                <li>Tech Talks and Guest Sessions</li>
+                <li>Open Source and Collaborative Projects</li>
+                <li>AI, IoT, and Cloud Learning Series</li>
+            </ul>
+        </div>
+
+        <div class="join-section" id="join">
+            <h2>Join Us</h2>
+            <p>
+                Passionate about technology and innovation? Become a member of Web Nest today!
+            </p>
+            <button class="join-btn">Join Now</button>
+        </div>
+
+        <div class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <p><strong>Club Head:</strong> Umang Sharma 
+            <br>Email: <a href="mailto:umang.webnest@nexusforum.edu">umang.webnest@nexusforum.edu</a></p>
+
+            <p><strong>Co-Head:</strong> Riya Patel
+            <br>Email: <a href="mailto:riya.webnest@nexusforum.edu">riya.webnest@nexusforum.edu</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="top">
+                <h2>NEXUS FORUM</h2>
+                <p id="f">Nexus Forum 2025 all rights reserved.</p>
+            </div>
+            <div class="top2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Visit College</a></li>
+                </ul>
+            </div>
+            <div class="top4">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+                    <li><a href="{{url_for('events')}}">Events</a></li>
+                    <li><a href="{{url_for('committee')}}">Committee</a></li>
+                    <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="top3">
+                <h3>Connect with us</h3>
+                <div class="image">
+                    <a href="#"><img src="{{url_for('static', filename='instagram.png')}}" alt="Instagram"></a>
+                    <a href="#"><img src="{{url_for('static', filename='facebook.png')}}" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

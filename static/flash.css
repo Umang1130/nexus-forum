@@ -1,0 +1,39 @@
+/* Flash messages */
+.flash-messages {
+    padding: 1rem;
+    max-width: 800px;
+    margin: 1rem auto;
+}
+
+.flash-message {
+    padding: 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.flash-message.error {
+    background-color: #f44336;
+}
+
+.flash-message.warning {
+    background-color: #ff9800;
+}
+
+.flash-message.info {
+    background-color: #2196F3;
+}

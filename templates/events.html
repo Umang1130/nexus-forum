@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Events</title>
+  <link rel="stylesheet" href="{{url_for('static', filename='events.css')}}"/>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='shared-footer.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <nav class="navbar">
+        <img id="logo" src="{{url_for('static', filename='NEXUS white font.png')}}" alt="nexus logo">
+        <ul class="main-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+            <li><a href="{{url_for('events')}}">Events</a></li>
+            <li><a href="{{url_for('committee')}}">Committee</a></li>
+            <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+        </ul>
+        <ul class="auth-links">
+            <li><a href="{{url_for('login')}}"><button id="log">log in</button></a></li>
+            <span>|</span>
+            <li><a href="{{url_for('signup')}}"><button id="signup">Sign in</button></a></li>
+        </ul>
+    </nav>
+
+  
+  <section class="committee-container">
+    <h2 class="committee-title">Upcoming Events</h2>
+    <div class="committee-list">
+
+      <div class="committee-card">
+        <img src="{{ url_for('static', filename='images/events/event1.jpg') }}" alt="Data Dive" class="member-photo">
+        <h3 class="member-name">Data Dive</h3>
+        <p class="role">August 31, 2025</p>
+        <p>Join us for an intensive, hands-on data analytics experience where you'll tackle real-world datasets and uncover hidden insights.</p>
+        <button onclick="window.location.href='https://forms.gle/XvXRaagCRTsBkmP18'" class="register-btn">Register Now</button>
+      </div>
+
+      <div class="committee-card">
+        <img src="{{ url_for('static', filename='images/events/event2.jpg') }}" alt="Data Hackathon" class="member-photo">
+        <h3 class="member-name">Data Hackathon</h3>
+        <p class="role">September 15, 2025</p>
+        <p>Collaborate, innovate, and solve real-world data challenges in a high-energy hackathon with exciting prizes for winners.</p>
+        <button onclick="window.location.href='https://forms.gle/XvXRaagCRTsBkmP18'" class="register-btn">Register Now</button>
+      </div>
+
+    </div>
+    
+  </section>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}NEXUS{% endblock %} - Nexus Forum</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/shared-footer.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/flash.css') }}">
+    {% block additional_css %}{% endblock %}
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        /* User authentication styles */
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .user-circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .username {
+            font-weight: 500;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="{{ url_for('index') }}">
+                <img src="{{ url_for('static', filename='images/NEXUS white font.png') }}" alt="NEXUS">
+            </a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('events') }}">Events</a></li>
+            <li><a href="{{ url_for('clubs') }}">Clubs</a></li>
+            <li><a href="{{ url_for('committee') }}">Committee</a></li>
+            <li><a href="{{ url_for('faculty') }}" class="faculty-link">Faculty</a></li>
+            {% if current_user %}
+                <li class="user-info">
+                    <div class="user-circle"><i class="fa fa-user"></i></div>
+                    <span class="username">{{ current_user.username }}</span>
+                    <a href="{{ url_for('logout') }}" class="auth-button">Log Out</a>
+                </li>
+            {% else %}
+                <li class="auth-buttons">
+                    <a href="{{ url_for('login') }}" class="auth-button">Login</a>
+                    <a href="{{ url_for('signup') }}" class="auth-button">Sign Up</a>
+                </li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <div class="flash">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer>
+        {% block footer %}
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>About NEXUS</h3>
+                <p>NEXUS is the technical forum of UPES, fostering innovation and technical excellence among students.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="{{ url_for('clubs') }}">Clubs</a></li>
+                    <li><a href="{{ url_for('events') }}">Events</a></li>
+                    <li><a href="{{ url_for('committee') }}">Committee</a></li>
+                    <li><a href="{{ url_for('faculty') }}">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 NEXUS Forum. All rights reserved.</p>
+        </div>
+        {% endblock %}
+    </footer>
+</body>
+</html>

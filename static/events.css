@@ -1,0 +1,344 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+  font-family: "Mozilla Headline";
+  font-optical-sizing: auto;
+  font-weight: 200px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+
+
+body{
+    background-color: rgb(22, 22, 22);
+    color: white;
+}
+
+#back {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+}
+
+.video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+}
+
+#logo {
+   width: 70px; 
+   height: 70px;
+   margin: 4px 0 0 15px;
+   margin-top: 10px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+}
+
+.navbar li{
+    display: flex;
+    justify-content: center;
+}
+
+.main-links {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+    margin-top: -15px;
+    margin-left: 200px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px 18px 50px;
+    gap: -3px;
+    top: -24px;
+    /* padding: 0px 8px; */
+    cursor: pointer;
+}
+
+.auth-links a {
+    padding: 10px 7px;
+    margin-top: 13px;
+}
+
+.auth-links span {
+    color: white;
+    padding: 12px 0;
+    margin-top: 5px;
+
+}
+
+#log {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 11px;
+    background-color: rgb(22, 22, 22);
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#log:hover {
+    background-color: rgba(96, 255, 247, 0.604);
+    color: black;
+}
+
+#signup {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 11px;
+    background-color: rgba(96, 175, 255, 0.91);
+    cursor: pointer;
+    font-size: medium;
+    font-weight:500;
+    transition: background-colo 0.25s ease;
+}
+
+#signup:hover {
+    background-color: rgb(120, 187, 255);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 9px 20px;
+    font-size: large;
+
+}
+
+
+/* ===== Header ===== */
+header {
+    background-color: #161414;
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 2px solid #0d7377;
+}
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #bbb;
+    font-size: 1.1em;
+}
+
+/* ===== Events Section ===== */
+.committee-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 30px;
+}
+
+.committee-title {
+    color: #14ffec;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 2.2em;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.committee-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 28px;
+}
+
+.committee-card {
+    background: #1c1c1c;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.committee-card:hover {
+    transform: translateY(-6px) scale(1.02);
+    box-shadow: 0 8px 25px rgba(20,255,236,0.3);
+}
+
+.member-photo {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border: none;
+    margin: 0;
+    display: block;
+}
+.member-name {
+    font-size: 1.4em;
+    margin: 15px 15px 5px;
+    font-weight: bold;
+    color: #14ffec;
+    text-align: left;
+}
+
+.role {
+    font-size: 1em;
+    color: #0d7377;
+    margin: 0 15px 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-align: left;
+}
+
+.committee-card p {
+    font-size: 0.95em;
+    line-height: 1.5;
+    color: #ccc;
+    margin: 0 15px 15px;
+    text-align: left;
+}
+.register-btn {
+    background: #0d7377;
+    color: #fff;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0 15px 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.register-btn:hover {
+    background: #14ffec;
+    color: #000;
+    transform: translateY(-3px);
+}
+
+.haikei-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('low-poly-grid-haikei.svg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.08;
+    z-index: -1;
+    animation: bgMove 20s linear infinite;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(22, 22, 22, 0.8);
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 8%;
+    height: 15em;
+    font-size: 16px; 
+    position: relative;
+    padding-left: 8em;
+    bottom: 0;
+    padding: 2em;
+}
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 35%;
+    height: 100px;
+    gap: 5px;
+    text-align: left;
+    margin-right: 3em;
+    margin-bottom: 11em;
+}
+
+.footer .top h2 {
+    font-size: 3em;
+}
+
+.f{
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.image {
+    display: flex;
+}
+
+.footer .top2 h3{
+    margin-bottom: 0;
+}
+
+.footer .top3 h3{
+    margin-bottom: 0;
+}
+
+.footer .top4 h3{
+    margin-bottom: 0;
+}

@@ -1,0 +1,301 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+}
+body {
+  font-family: "Mozilla Headline";
+  font-optical-sizing: auto;
+  font-weight: 200px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+body {
+    background-color: #111111;
+    color: #f1f1f1;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 90px;
+}
+
+#logo {
+   width: 70px; 
+   height: 70px;
+   margin: 4px 0 0 15px;
+   margin-top: 10px;
+}
+
+.navbar ul{
+    list-style: none;
+    display: flex;
+    margin-top: 10px;
+}
+
+.navbar li{
+    display: flex;
+    justify-content: center;
+}
+
+.main-links {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-right: 10px;
+    margin-top: -15px;
+    margin-left: 200px;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.auth-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 5px 18px 50px;
+    gap: -3px;
+    top: -24px;
+    /* padding: 0px 8px; */
+    cursor: pointer;
+}
+
+.auth-links a {
+    padding: 10px 7px;
+    margin-top: 13px;
+}
+
+.auth-links span {
+    color: white;
+    padding: 12px 0;
+    margin-top: 5px;
+
+}
+
+#log {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 11px;
+    background-color: rgb(22, 22, 22);
+    cursor: pointer;
+    font-size: medium;
+    font-weight: 400;
+    color: white;
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+#log:hover {
+    background-color: rgba(96, 255, 247, 0.604);
+    color: black;
+}
+
+#signup {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 11px;
+    background-color: rgba(96, 175, 255, 0.91);
+    cursor: pointer;
+    font-size: medium;
+    font-weight:500;
+    transition: background-colo 0.25s ease;
+}
+
+#signup:hover {
+    background-color: rgb(120, 187, 255);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 9px 20px;
+    font-size: large;
+
+}
+
+
+h1 {
+    color: #ffffff;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+}
+.committee-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+}
+.committee-title {
+    color: #14a9ff;
+    text-align: center;
+    margin-bottom: 22px;
+    font-size: 2em;
+    letter-spacing: 1.5px;
+}
+.committee-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 38px;
+}
+.committee-card {
+    background: #222;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    padding: 28px 18px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+.committee-card:hover {
+    transform: scale(1.005);
+    box-shadow: 0 6px 20px rgba(52, 53, 53, 0.1);
+}
+
+.faculty-coordinator-container .committee-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    padding: 20px 30px;
+}
+
+.faculty-coordinator-container .member-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.284);
+    border: 3px solid #dadada;
+    transition: none;
+}
+
+.faculty-coordinator-container .role,
+.faculty-coordinator-container .member-name {
+    margin: 0;
+}
+.role {
+    font-size: 1.05em;
+    color: #0d7377;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+.member-name {
+    color: #f1f1f1;
+    font-size: 1.2em;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.member-photo {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 16px auto;
+    display: block;
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.284);
+    border: 3px solid #dadada;
+    transition: transform 0.3s ease;
+}
+/* .member-photo:hover {
+    transform: scale(1.005);
+} */
+
+.haikei-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('blob-scene-haikei.svg');
+    background-size:fill;
+    background-position: center;
+    opacity: 0.1;
+    z-index: -1;
+    animation: bg move 20s linear infinite;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    background-color: rgba(22, 22, 22, 0.8);
+    font-size: 16px;
+    position: relative;
+    bottom: 0;
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 8%;
+    height: 15em;
+    font-size: 16px; 
+    position: relative;
+    padding-left: 8em;
+    bottom: 0;
+    padding: 2em;
+}
+
+.footer-col{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 200px;
+}
+
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    width: 35%;
+    height: 100px;
+    gap: 5px;
+    text-align: left;
+    margin-right: 3em;
+    margin-bottom: 11em;
+}
+
+.footer .top h2 {
+    font-size: 3em;
+}
+
+.f{
+    font-size: 1em;
+    font-family: "Montserrat", sans-serif;
+    font-weight: lighter;
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+}
+
+.image {
+    display: flex;
+}
+
+.footer .top2 h3{
+    margin-bottom: 0;
+}
+
+.footer .top3 h3{
+    margin-bottom: 0;
+}
+
+.footer .top4 h3{
+    margin-bottom: 0;
+}

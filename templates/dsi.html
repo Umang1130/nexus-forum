@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus - Data Science Innovation</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='dsi.css')}}"/>
+    <link rel="stylesheet" href="{{url_for('static', filename='shared-footer.css')}}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <img id="logo" src="{{url_for('static', filename='NEXUS white font.png')}}" alt="nexus logo">
+        <ul class="main-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+            <li><a href="{{url_for('events')}}">Events</a></li>
+            <li><a href="{{url_for('committee')}}">Committee</a></li>
+            <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+        </ul>
+        <ul class="auth-links">
+            <li><a href="{{url_for('login')}}"><button id="log">log in</button></a></li>
+            <span>|</span>
+            <li><a href="{{url_for('signup')}}"><button id="signup">Sign in</button></a></li>
+        </ul>
+    </nav>
+
+    <div class="page-header">
+        <h1>Data Science Innovation Club</h1>
+        <p>Turning data into insights through machine learning, AI, and analytics</p>
+    </div>
+
+    <div class="container">
+        <div class="about-section" id="about">
+            <h2>About Us</h2>
+            <p>
+                <strong>Data Science Innovation Club</strong> is a cutting-edge club under the Nexus Forum. We are dedicated to exploring the vast world of data science, machine learning, artificial intelligence, and big data analytics. Our mission is to transform raw data into meaningful insights that drive innovation and solve real-world problems.
+            </p>
+
+            <h2>Activities</h2>
+            <ul>
+                <li>Hands-on Machine Learning workshops with real datasets</li>
+                <li>Data visualization competitions using Python and R</li>
+                <li>AI/ML project showcases and hackathons</li>
+                <li>Industry expert talks on data science trends</li>
+                <li>Kaggle competitions and collaborative learning</li>
+                <li>Research paper discussions and presentations</li>
+                <li>Data preprocessing and feature engineering sessions</li>
+                <li>Cloud computing and MLOps workshops</li>
+            </ul>
+        </div>
+
+        <div class="join-section" id="join">
+            <h2>Join Us</h2>
+            <p>
+                Ready to dive into the world of data science and AI? Join our community of passionate data enthusiasts and start building the future with data!
+            </p>
+            <button class="join-btn">Join DSI Club</button>
+        </div>
+
+        <div class="contact-section" id="contact">
+            <h2>Contact</h2>
+            <p><strong>Club Head:</strong> Priya Sharma 
+            <br>Email: <a href="mailto:priya@nexusforum.edu">priya@nexusforum.edu</a></p>
+
+            <p><strong>Technical Lead:</strong> Dhanshri Wanjari
+            <br>Email: <a href="mailto:arjun@nexusforum.edu">arjun@nexusforum.edu</a></p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <div class="top">
+                <h2>NEXUS FORUM</h2>
+                <p id="f">Nexus Forum 2025 all rights reserved.</p>
+            </div>
+            <div class="top2">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#">Contact US</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Visit College</a></li>
+                </ul>
+            </div>
+            <div class="top4">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="{{url_for('home')}}">Home</a></li>
+                    <li><a href="{{url_for('clubs')}}">Clubs</a></li>
+                    <li><a href="{{url_for('events')}}">Events</a></li>
+                    <li><a href="{{url_for('committee')}}">Committee</a></li>
+                    <li><a href="{{url_for('faculty')}}">Faculty</a></li>
+                </ul>
+            </div>
+            <div class="top3">
+                <h3>connect with us</h3>
+                <div class="image">
+                    <a href="#"><img src="{{url_for('static', filename='instagram.png')}}" alt="Instagram"></a>
+                    <a href="#"><img src="{{url_for('static', filename='facebook.png')}}" alt="Facebook"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

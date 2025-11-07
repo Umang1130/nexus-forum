@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='login-sign.css')}}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+    href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap"
+    rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <video id="back" src="{{ url_for('static', filename='6797-196071980.mp4') }}" autoplay loop muted playsinline></video>
+    <div class="signup-box">
+        <div class="inner-box2">
+            <img src="{{url_for('static', filename='NEXUS white font.png')}}" alt="logo">
+            <h2>Sign Up</h2>
+            <form method="POST" action="/signup " name="signup">
+                <div class="form">
+                    <input class="input-box" name="name"  type="text" placeholder="Name" required />
+                    <input class="input-box" name="email"  type="email" placeholder="example@gmail.com" required />
+                    <input class="input-box" name="password"  type="password" placeholder="Password" required />
+                </div>
+                <button id="signup-btn" type="submit">Sign Up</button>
+            </form>
+            <div class="link">
+                <pre>Already have an account? <a href="{{url_for('login')}}">Login</a></pre>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

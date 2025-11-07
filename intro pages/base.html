@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %} - Nexus Forum</title>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="/intro pages/style.css">
+    <link rel="stylesheet" href="/shared-footer.css">
+    <link rel="stylesheet" href="/intro pages/flash.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mozilla+Headline:wght@200..700&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- FontAwesome for user icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    {% block styles %}{% endblock %}
+    <style>
+        /* 🔹 Added styles for user icon and logout area */
+        .auth-links {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+        }
+
+        .user-circle {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            background-color: #007bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 16px;
+        }
+
+        .username {
+            font-weight: 500;
+            color: white;
+        }
+
+        #logout-btn {
+            background-color: #111;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 6px 12px;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        #logout-btn:hover {
+            background-color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <img id="logo" src="/intro pages/NEXUS white font.png" alt="nexus logo">
+
+        <ul class="main-links">
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('clubs') }}">Clubs</a></li>
+            <li><a href="{{ url_for('events') }}">Events</a></li>
+            <li><a href="{{ url_for('committee') }}">Committee</a></li>
+            <li><a href="{{ url_for('faculty') }}">Faculty</a></li>
+        </ul>
+
+        <ul class="auth-links">
+            {% if logged_in %}
+                <li class="user-info">
+                    <div class="user-circle"><i class="fa fa-user"></i></div>
+                    <span class="username">{{ user.name }}</span>
+                    <a href="{{ url_for('logout') }}">
+                        <button id="logout-btn">Logout</button>
+                    </a>
+                </li>
+            {% else %}
+                <li><a href="{{ url_for('login') }}"><button id="log">Log in</button></a></li>
+                <span>|</span>
+                <li><a href="{{ url_for('signup') }}"><button id="signup">Sign in</button></a></li>
+            {% endif %}
+        </ul>
+    </nav>
+
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-messages">
+                {% for message in messages %}
+                    <div class="flash-message">{{ message }}</div>
+                {% endfor %}
+            </div>
+        {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+</body>
+</html>
